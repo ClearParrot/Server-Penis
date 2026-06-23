@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Bedrock Dashboard Prototyp</title>
+<style>
+body{font-family:Arial,sans-serif;background:#1e1e1e;color:#fff;margin:0}
+header{background:#2d7d46;padding:15px;font-size:24px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:15px;padding:15px}
+.card{background:#2b2b2b;padding:15px;border-radius:10px}
+button{padding:8px 12px;margin:4px}
+input,select,textarea{width:100%;padding:8px;margin-top:5px;background:#111;color:#fff;border:1px solid #555}
+.upload{border:2px dashed #666;padding:20px;text-align:center;margin-top:10px}
+ul{padding-left:20px}
+</style>
+</head>
+<body>
+
+<header>🎮 Minecraft Bedrock Dashboard</header>
+
+<div class="grid">
+
+<div class="card">
+<h2>Serverstatus</h2>
+<p>🟢 Online</p>
+<p>Spieler: 7 / 20</p>
+<button>Start</button>
+<button>Stop</button>
+<button>Neustart</button>
+</div>
+
+<div class="card">
+<h2>Online-Spieler</h2>
+<ul>
+<li>Steve</li>
+<li>Alex</li>
+<li>Builder123</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Welteinstellungen</h2>
+<label>Schwierigkeit</label>
+<select>
+<option>Peaceful</option>
+<option>Easy</option>
+<option selected>Normal</option>
+<option>Hard</option>
+</select>
+
+<label>Max. Spieler</label>
+<input type="number" value="20">
+
+<button>Speichern</button>
+</div>
+
+<div class="card">
+<h2>Konsole</h2>
+<textarea rows="10" readonly>[INFO] Server gestartet...</textarea>
+<input placeholder="Befehl eingeben">
+<button>Senden</button>
+</div>
+
+<div class="card">
+<h2>📦 Resource Packs</h2>
+
+<div class="upload">
+Datei hier ablegen<br>
+(.mcpack, .mcaddon, .zip)
+</div>
+
+<p><strong>Aktivierte Packs</strong></p>
+<ul>
+<li>Better Textures v2</li>
+<li>Realistic Sky</li>
+</ul>
+
+<button>Aktivieren</button>
+<button>Deaktivieren</button>
+<button>Löschen</button>
+</div>
+
+<div class="card">
+<h2>🧩 Add-ons</h2>
+<ul>
+<li>Furniture Addon</li>
+<li>More Ores</li>
+</ul>
+
+<button>Installieren</button>
+<button>Entfernen</button>
+</div>
+
+<div class="card">
+<h2>📁 Dateimanager</h2>
+<ul>
+<li>worlds/</li>
+<li>resource_packs/</li>
+<li>behavior_packs/</li>
+<li>backups/</li>
+<li>server.properties</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💾 Backups</h2>
+<button>Backup erstellen</button>
+<button>Backup wiederherstellen</button>
+</div>
+
+</div>
+</body>
+</html>
